@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator by Mayank Mahajan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="password-card">
+        <div class="card-header">
+          <h1 class="gradient-text">Password Generator</h1>
+          <p class="author">Made by Mayank Mahajan</p>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+
+        <div class="password-display">
+          <input
+            type="text"
+            class="password-input"
+            id="passwordOutput"
+            placeholder="Your secure password"
+            readonly
+          />
+          <button class="copy-button" id="copyBtn">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+
+        <div class="strength-meter">
+          <div class="strength-bar" id="strengthBar"></div>
+        </div>
+        <div class="strength-text" id="strengthText"></div>
+
+        <div class="options-container">
+          <div class="length-slider">
+            <div class="slider-header">
+              <span class="slider-label">Password Length</span>
+              <span class="length-value" id="lengthValue">12</span>
+            </div>
+            <input
+              type="range"
+              class="range-slider"
+              id="lengthSlider"
+              min="6"
+              max="30"
+              value="12"
+            />
+          </div>
+
+          <div class="checkbox-grid">
+            <label class="checkbox-container">
+              <input type="checkbox" class="checkbox" id="lowercase" checked />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Lowercase (a-z)</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" class="checkbox" id="uppercase" checked />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Uppercase (A-Z)</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" class="checkbox" id="numbers" checked />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Numbers (0-9)</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" class="checkbox" id="symbols" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Symbols (!@#$%)</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn">Generate Password</button>
+      </div>
+    </div>
+
+    <div class="notification" id="notification">
+      Password copied to clipboard!
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
